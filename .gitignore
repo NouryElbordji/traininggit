@@ -2,4 +2,7 @@
 *.zip
 *.exe
 
+#ignorer les fichiers attributs
+.gitattributes
+
 
