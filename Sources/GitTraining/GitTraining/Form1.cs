@@ -20,7 +20,20 @@ namespace GitTraining
     protected override void OnLoad(EventArgs e)
     {
       base.OnLoad(e);
-      this.dateEdit1.EditValue = DateTime.Now.ToString();
+      timer1.Interval = 1000;
+      timer1.Start();
+      button1.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+    }
+
+    private void timer1_Tick(object sender, EventArgs e)
+    {
+      button1.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        timer1.Stop();
+      this.Close();
     }
   }
 }
