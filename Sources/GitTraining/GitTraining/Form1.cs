@@ -22,5 +22,10 @@ namespace GitTraining
       base.OnLoad(e);
       this.dateEdit1.EditValue = DateTime.Now.ToString();
     }
+
+    private void buttonPlus_Click(object sender, EventArgs e)
+    {
+      this.dateEdit1.DateTime = this.dateEdit1.DateTime.AddDays(1);
+    }
   }
 }
